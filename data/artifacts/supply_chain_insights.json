@@ -1,12 +1,12 @@
 {
-  "Inventory Management": "Current efficiency: 80.88%. Improve safety stock for high-demand SKUs.",
-  "Demand Forecasting": "Forecast accuracy: 97.44%. Integrate model outputs into rolling forecasts.",
-  "Logistics Planning": "Lead time stability: 97.96%. Optimize routes for time-sensitive categories.",
-  "Supplier Collaboration": "Data completeness: 0.07%. Strengthen supplier integration via shared dashboards.",
-  "AI": "Model AUC 98.32%. Continue training for anomaly detection and predictive restocking.",
-  "Machine Learning": "Model F1 74.79%. ML pipeline successfully classifies demand with balanced precision-recall.",
-  "Efficiency": "Operational efficiency: 76.44%. Use automation to reduce manual intervention.",
-  "Cost Reduction": "Potential cost saving: 25.21%. Target low-demand SKUs for markdown or clearance.",
-  "Lead Time": "Lead optimization: 97.96%. Deploy predictive shipment allocation.",
-  "Risk Management": "Risk mitigation score: 96.56%. Monitor supplier and demand volatility continuously."
+  "Inventory Optimization": "Current efficiency: 80.88%. Improve safety stock levels for high-demand SKUs to prevent stockouts.",
+  "Demand Forecasting Accuracy": "Forecast accuracy: 97.44%. Integrate predictive model outputs into rolling forecasts for better demand planning.",
+  "Logistics Efficiency": "Lead time stability: 97.96%. Optimize routes and scheduling for time-sensitive categories to minimize delays.",
+  "Supplier Data Integration": "Data completeness: 0.07%. Strengthen supplier collaboration through unified, real-time dashboards.",
+  "AI-Driven Analytics": "Model AUC: 98.32%. Continue model training for enhanced anomaly detection and predictive restocking.",
+  "Machine Learning Performance": "Model F1 Score: 74.79%. ML pipeline effectively classifies demand with balanced precision and recall.",
+  "Operational Efficiency": "Process efficiency: 76.44%. Automate repetitive workflows to reduce manual intervention and errors.",
+  "Cost Optimization": "Potential savings: 25.21%. Identify low-demand SKUs for markdowns or clearance to improve turnover.",
+  "Lead Time Optimization": "Lead time reliability: 97.96%. Deploy predictive shipment allocation to enhance on-time deliveries.",
+  "Risk and Compliance Management": "Risk mitigation score: 96.56%. Continuously monitor supplier reliability and demand volatility for proactive management."
 }
