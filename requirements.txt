@@ -1,0 +1,12 @@
+pandas
+numpy
+matplotlib
+seaborn
+plotly
+streamlit
+tensorflow>=2.10
+scikit-learn
+joblib
+openpyxl
+kaleido
+tensorflow
