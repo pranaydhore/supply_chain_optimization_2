@@ -12,7 +12,7 @@ warnings.filterwarnings("ignore")
 # ---------------------------------------------------------------
 # 🧭 CONFIGURATION
 # ---------------------------------------------------------------
-DATA_DIR = r"C:\Users\ASUS\OneDrive\Documents\Project\data"
+DATA_DIR = r"/Users/ASUS/OneDrive/Documents/Project/data"
 ARTIFACT_DIR = os.path.join(DATA_DIR, "artifacts")
 
 st.set_page_config(page_title="Supply Chain Analytics Dashboard", layout="wide")
