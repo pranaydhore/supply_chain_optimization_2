@@ -2,14 +2,14 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Supply Chain Optimization Dashboard — Extended Project Explanation (HTML Only)</title>
+  <!-- <title>Supply Chain Optimization Dashboard — Extended Project Explanation (HTML Only)</title> -->
 </head>
 <body>
 
 <!-- ========================================================= -->
 <!-- Title Page -->
 <!-- ========================================================= -->
-<h1>Supply Chain Optimization Dashboard — Extended Explanation</h1>
+<h1>Supply Chain Optimization Dashboard — Explanation</h1>
 <p>
 This document is a <strong>comprehensive, plain-HTML</strong> explanation of the Supply Chain Optimization Dashboard project.
 It covers theory, methodology, system architecture, machine learning workflow, data processing, model evaluation, KPI mapping,
