@@ -1,26 +1,76 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>README — Supply Chain Optimization Dashboard</title>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet">
+<meta name="description" content="Streamlit + Plotly Supply Chain Optimization Dashboard README in HTML.">
+<style>
+  :root{
+    --bg:#0b0e13; --panel:#121722; --panel2:#0f141e; --text:#e7eefc; --muted:#9fb0cc;
+    --brand:#5b8cff; --accent:#22d3ee; --ok:#22c55e; --warn:#f59e0b; --bad:#ef4444;
+    --border:#1b2331; --code:#0d1117; --code-b:#1f2632; --card-r:18px; --shadow:0 10px 26px rgba(0,0,0,.35);
+  }
+  .light{
+    --bg:#f7f9fc; --panel:#ffffff; --panel2:#f6f8fd; --text:#0f1220; --muted:#556482;
+    --brand:#3b82f6; --accent:#06b6d4; --border:#e6ecf5; --code:#0f172a; --code-b:#0b1220;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);font-family:Inter,system-ui,Segoe UI,Roboto,Arial;color:var(--text);line-height:1.6}
+  .wrap{max-width:1040px;margin:0 auto;padding:24px}
+  header.hero{position:relative;border:1px solid var(--border);border-radius:22px;padding:42px 28px;
+    background:radial-gradient(1200px 400px at -10% -20%, rgba(124,245,255,.16), transparent 55%),
+               radial-gradient(1200px 400px at 110% -10%, rgba(91,140,255,.18), transparent 55%),
+               linear-gradient(180deg,var(--panel),var(--panel2));
+    box-shadow:var(--shadow);overflow:hidden}
+  h1{margin:.25rem 0 .35rem;font-size:clamp(28px,4vw,44px)}
+  .sub{color:var(--muted);max-width:72ch}
+  .row{display:grid;gap:18px}
+  @media (min-width:920px){ .row.cols-2{grid-template-columns:1.1fr .9fr} }
+  section.card{border:1px solid var(--border);border-radius:18px;padding:20px;background:linear-gradient(180deg,var(--panel),var(--panel2));box-shadow:var(--shadow)}
+  h2{margin:.2rem 0 .6rem;font-size:22px}
+  h3{margin:1rem 0 .4rem;font-size:18px}
+  .toc a{display:block;padding:8px 10px;border-radius:10px;color:var(--muted);text-decoration:none;border:1px dashed transparent}
+  .toc a:hover{background:rgba(124,245,255,.06);color:var(--text);border-color:var(--border)}
+  .pill{display:inline-flex;gap:8px;align-items:center;background:rgba(124,245,255,.12);border:1px solid rgba(124,245,255,.25);color:#9feaff;padding:6px 10px;border-radius:999px;font-size:12px;font-weight:700}
+  .badges{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
+  .badge{font-size:12px;border:1px solid var(--border);border-radius:999px;padding:3px 8px;color:var(--muted)}
+  .btn{display:inline-block;background:linear-gradient(180deg,var(--brand),#355fc7);color:#fff;border:1px solid rgba(255,255,255,.15);padding:10px 14px;border-radius:12px;font-weight:700;text-decoration:none;margin-right:10px}
+  .btn.ghost{background:transparent;color:var(--text);border:1px solid var(--border)}
+  pre{background:var(--code);color:#e5ecf7;border:1px solid var(--code-b);padding:14px;border-radius:12px;overflow:auto}
+  code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+  table{width:100%;border-collapse:separate;border-spacing:0;border:1px solid var(--border);border-radius:12px;overflow:hidden}
+  th,td{padding:10px 12px;border-bottom:1px solid var(--border);text-align:left}
+  th{background:rgba(124,245,255,.08)}
+  ul.clean{margin:0;padding-left:18px}
+  .callout{border-left:4px solid var(--brand);background:rgba(91,140,255,.10);padding:12px 14px;border-radius:8px;margin:12px 0}
+  footer{color:var(--muted);text-align:center;margin:28px 0}
+  .topbar{position:absolute;top:16px;right:16px;display:flex;gap:10px}
+  .switch{width:48px;height:28px;border:1px solid var(--border);border-radius:999px;background:var(--panel2);cursor:pointer;position:relative}
+  .knob{position:absolute;top:50%;left:3px;transform:translateY(-50%);width:22px;height:22px;border-radius:50%;background:linear-gradient(180deg,#fff,#cbd5e1)}
+  .light .knob{left:23px}
+</style>
+</head>
 <body>
-  <div class="container">
+  <div class="wrap">
     <header class="hero">
-      <div class="theme-toggle">
-        <span class="tag">Theme</span>
-        <div class="switch" id="themeSwitch" title="Toggle light/dark">
-          <div class="knob"></div>
-        </div>
+      <div class="topbar">
+        <div class="switch" id="theme"><div class="knob"></div></div>
       </div>
-      <span class="pill">Streamlit • Plotly • ML</span>
+      <span class="pill">README • Streamlit • Plotly • ML</span>
       <h1>Supply Chain Optimization Dashboard</h1>
       <p class="sub">
-        A modern analytics app that transforms raw operational data into actionable insights. 
-        Explore model performance (Accuracy, Precision, Recall, F1, AUC), visualize confusion matrices & ROC curves,
-        compare experiments, and assess business impact via a dedicated KPI Matrix — all in one place.
+        A professional Streamlit dashboard powered by Plotly and ML evaluation metrics. It turns raw operational data into actionable insights:
+        model KPIs, confusion matrix, ROC, KPI analytics, model comparison, business domain mapping, and a dedicated <strong>KPI Matrix</strong> tab.
       </p>
-      <div class="cta">
+      <div style="margin-top:14px">
         <a class="btn" href="#quickstart">🚀 Quickstart</a>
-        <a class="btn sec" href="#architecture">📐 Architecture</a>
-        <a class="btn sec" href="#kpi-matrix">📊 KPI Matrix</a>
+        <a class="btn ghost" href="#kpi-matrix">📊 KPI Matrix</a>
+        <a class="btn ghost" href="#structure">📁 Structure</a>
       </div>
-      <div class="meta">
+      <div class="badges">
         <span class="badge">Python 3.10+</span>
         <span class="badge">Streamlit</span>
         <span class="badge">Plotly</span>
@@ -28,178 +78,115 @@
       </div>
     </header>
 
-    <div class="grid cols-2" style="margin-top:22px">
-      <aside class="toc card">
-        <h3 style="margin:0 0 10px">Table of Contents</h3>
-        <a href="#overview">Overview</a>
-        <a href="#features">Features by Tab</a>
-        <a href="#project-structure">Project Structure</a>
-        <a href="#quickstart">Quickstart</a>
-        <a href="#configuration">Configuration Paths</a>
-        <a href="#architecture">Architecture & Data Flow</a>
-        <a href="#visuals">Key Visuals</a>
+   <div class="row cols-2" style="margin-top:22px">
+      <aside class="card toc">
+        <h3 style="margin-top:0">Table of Contents</h3>
+        <a href="#about">About</a>
+        <a href="#features">Features</a>
+        <a href="#structure">Project Structure</a>
+        <a href="#quickstart">Installation & Quickstart</a>
         <a href="#kpi-matrix">KPI Matrix (New)</a>
-        <a href="#usage">Usage Guide</a>
-        <a href="#troubleshooting">Troubleshooting</a>
-        <a href="#faq">FAQ</a>
+        <a href="#visuals">Key Visuals</a>
         <a href="#team">Team</a>
         <a href="#roadmap">Roadmap</a>
+        <a href="#contrib">Contribute</a>
         <a href="#license">License</a>
       </aside>
 
-      <main class="grid" style="gap:18px">
-        <section id="overview" class="card">
-          <h2>Overview</h2>
+  <main class="row" style="gap:18px">
+        <section id="about" class="card">
+          <h2>About</h2>
           <p>
-            This dashboard helps Supply Chain and Data teams evaluate model quality, compare experiments across datasets,
-            and translate metrics into business-aligned KPIs. It is built with Streamlit and Plotly, and uses scikit-learn
-            for evaluation utilities such as confusion matrix and ROC-AUC.
+            This dashboard helps Supply Chain, Operations, and Data teams evaluate model quality, compare experiments across datasets, and translate metrics
+            into business-aligned KPIs. Built with Streamlit + Plotly, and scikit-learn for evaluation utilities.
           </p>
-          <div class="callout">
-            <strong>Highlights:</strong> unified UI, fast cached data loading, downsampling support for large CSVs,
-            and a dedicated <em>KPI Matrix</em> tab for leadership-friendly reporting.
-          </div>
+          <div class="callout"><strong>Highlights:</strong> cached loaders, optional downsampling for large CSVs, and a leadership-friendly KPI Matrix.</div>
         </section>
 
-        <section id="features" class="card">
-          <h2>Features by Tab</h2>
-          <ul class="list-check">
-            <li><strong>Overview</strong> — Confusion Matrix, ROC Curve with live AUC, and model KPIs (top cards).</li>
-            <li><strong>KPI Insights</strong> — Average KPI bars, variability box plots, numeric KPI detection.</li>
-            <li><strong>Python Charts</strong> — 8+ interactive charts (histogram, bar, box, scatter, line, area, heatmap, bubble) with selectable axes.</li>
-            <li><strong>Comparison</strong> — Cross-experiment accuracy comparison from <code>platforms_comparison_metrics.csv</code>.</li>
-            <li><strong>Business Domains</strong> — Maps columns to domains (Inventory, Demand, Logistics, etc.) and visualizes domain scores.</li>
-            <li><strong>KPI Matrix (New)</strong> — Displays <em>Supply Chain KPI Matrix</em> table, a radar (polar) chart, and a comparison bar chart.</li>
-            <li><strong>Team</strong> — Project members and roles.</li>
-          </ul>
+  <section id="features" class="card">
+          <h2>Features</h2>
+          <table>
+            <thead><tr><th>Module</th><th>Description</th></tr></thead>
+            <tbody>
+              <tr><td><strong>Model KPIs</strong></td><td>Accuracy, Precision, Recall, F1, and ROC-AUC summary cards.</td></tr>
+              <tr><td><strong>Confusion Matrix & ROC</strong></td><td>Evaluate classification quality and thresholds.</td></tr>
+              <tr><td><strong>KPI Insights</strong></td><td>Average KPI bars and variability box plots.</td></tr>
+              <tr><td><strong>Python Charts Lab</strong></td><td>8+ interactive charts (histogram, bar, box, scatter, line, area, heatmap, bubble).</td></tr>
+              <tr><td><strong>Comparison</strong></td><td>Cross-experiment accuracy from <code>platforms_comparison_metrics.csv</code>.</td></tr>
+              <tr><td><strong>Business Domains</strong></td><td>Maps columns to Inventory, Demand, Logistics, Supplier, etc.</td></tr>
+              <tr><td><strong>KPI Matrix</strong></td><td>Table + Radar (polar) + KPI comparison bar chart.</td></tr>
+              <tr><td><strong>Team</strong></td><td>Project contributors and roles.</td></tr>
+            </tbody>
+          </table>
         </section>
 
-        <section id="project-structure" class="card">
+   <section id="structure" class="card">
           <h2>Project Structure</h2>
           <pre><code>Project/
-├─ app.py
-├─ README.md
-├─ notebooks/
-│  ├─ comparison_results/          # Per-dataset predictions & metrics
-│  └─ combined_results/            # Combined high-accuracy outputs
-├─ data/
-│  └─ artifacts/
-│     └─ supply_chain_kpi_matrix.csv
-└─ (optional) requirements.txt
+│── app.py                       # Streamlit dashboard
+│── README.md                    # Documentation (this)
+│
+│── notebooks/                   # Experiment notebooks
+│   ├── comparison_results/      # Per-dataset predictions & metrics
+│   └── combined_results/        # Combined high-accuracy outputs
+│
+│── data/
+│   └── artifacts/
+│       └── supply_chain_kpi_matrix.csv   # Used by KPI Matrix tab
 </code></pre>
         </section>
 
-   <section id="quickstart" class="card">
-          <h2>Quickstart</h2>
-          <h3>1) Create & Activate Virtual Environment</h3>
+  <section id="quickstart" class="card">
+          <h2>Installation & Quickstart</h2>
+          <h3>1) Clone</h3>
+          <pre><code>git clone &lt;your-repo-link&gt;
+cd &lt;project-folder&gt;</code></pre>
+          <h3>2) Virtual Environment</h3>
           <pre><code>python -m venv venv
-# Windows
-venv\Scripts\activate
-# macOS/Linux
-source venv/bin/activate</code></pre>
-
-  <h3>2) Install Dependencies</h3>
-          <pre><code>pip install streamlit plotly pandas numpy scikit-learn</code></pre>
-        <h3>3) Run the App</h3>
+venv\Scripts\activate   # Windows
+# source venv/bin/activate  # macOS/Linux</code></pre>
+          <h3>3) Install</h3>
+          <pre><code>pip install -r requirements.txt
+# If missing:
+pip install streamlit plotly pandas numpy scikit-learn</code></pre>
+          <h3>4) Run</h3>
           <pre><code>streamlit run app.py</code></pre>
-          <p class="muted">Open the provided local URL in your browser to view the dashboard.</p>
         </section>
-        
-  <section id="configuration" class="card">
-          <h2>Configuration Paths</h2>
-          <p>The app reads from these base paths (see top of <code>app.py</code>):</p>
-          <table class="table">
-            <thead><tr><th>Variable</th><th>Purpose</th><th>Default (example)</th></tr></thead>
+
+ <section id="kpi-matrix" class="card">
+          <h2>KPI Matrix (New)</h2>
+          <p>Place the following CSV before opening the tab:</p>
+          <pre><code>data/artifacts/supply_chain_kpi_matrix.csv</code></pre>
+          <table>
+            <thead><tr><th>Column</th><th>Type</th><th>Description</th></tr></thead>
             <tbody>
-              <tr><td><code>NOTEBOOKS_DIR</code></td><td>Jupyter notebooks & experiment outputs</td><td><code>C:\Users\ASUS\OneDrive\Documents\Project\notebooks</code></td></tr>
-              <tr><td><code>ARTIFACTS_DIR</code></td><td>Artifacts like KPI matrix CSV</td><td><code>C:\Users\ASUS\OneDrive\Documents\Project\data\artifacts</code></td></tr>
-              <tr><td><code>COMPARISON_DIR</code></td><td>Per-dataset results</td><td><code>[NOTEBOOKS_DIR]/comparison_results</code></td></tr>
-              <tr><td><code>COMBINED_DIR</code></td><td>Combined high-accuracy results</td><td><code>[NOTEBOOKS_DIR]/combined_results</code></td></tr>
-              <tr><td><code>SUMMARY_CSV</code></td><td>Model/platform comparison metrics</td><td><code>[COMPARISON_DIR]/platforms_comparison_metrics.csv</code></td></tr>
+              <tr><td><code>KPI</code></td><td>string</td><td>Metric label (e.g., Inventory Turnover, Fill Rate)</td></tr>
+              <tr><td><code>Value</code></td><td>number</td><td>Score (normalized 0–1 or scaled 0–100)</td></tr>
             </tbody>
           </table>
-          <p>Use the sidebar “🔄 Refresh Cache” button to clear cached CSV/JSON loads.</p>
-        </section>
-
-  <section id="architecture" class="card">
-          <h2>Architecture & Data Flow</h2>
-          <ol>
-            <li><strong>Data & Predictions</strong> — CSV predictions and JSON metrics are generated by notebooks into <code>comparison_results/</code> or <code>combined_results/</code>.</li>
-            <li><strong>Loaders</strong> — Cached helpers (<code>safe_load_csv</code>, <code>safe_load_json</code>) read and deduplicate columns; optional downsampling keeps UI responsive.</li>
-            <li><strong>UI Tabs</strong> — Each tab renders specific visuals based on selected dataset from the sidebar.</li>
-            <li><strong>KPI Matrix</strong> — Reads <code>supply_chain_kpi_matrix.csv</code> from <code>ARTIFACTS_DIR</code> for radar/table/bar outputs.</li>
-          </ol>
-          <pre><code>[Notebooks] → CSV/JSON → [Streamlit Loaders] → [Tabs & Visuals] → Insights</code></pre>
+          <ul class="clean">
+            <li>✅ KPI Data Table</li>
+            <li>✅ Radar (Polar) Strength Profile</li>
+            <li>✅ KPI Comparison Bar Chart</li>
+          </ul>
         </section>
 
   <section id="visuals" class="card">
           <h2>Key Visuals</h2>
-          <ul class="list-check">
-            <li><strong>Confusion Matrix</strong> — Immediate view of TP/FP/FN/TN.</li>
-            <li><strong>ROC Curve + AUC</strong> — Threshold-agnostic probability quality.</li>
-            <li><strong>Correlation Heatmap</strong> — Feature dependence analysis.</li>
-            <li><strong>Box / Bar / Line / Area / Scatter</strong> — Exploratory data views.</li>
-          </ul>
-        </section>
-
-  <section id="kpi-matrix" class="card">
-          <h2>KPI Matrix (New)</h2>
-          <p>
-            The KPI Matrix translates technical model outcomes into business language.
-            Provide the CSV at: <code>data/artifacts/supply_chain_kpi_matrix.csv</code>. It should minimally contain:
-          </p>
-          <table class="table">
-            <thead><tr><th>Column</th><th>Type</th><th>Description</th></tr></thead>
+          <table>
+            <thead><tr><th>Visualization</th><th>Purpose</th></tr></thead>
             <tbody>
-              <tr><td><code>KPI</code></td><td>string</td><td>Name of the KPI (e.g., Inventory Turnover, Fill Rate).</td></tr>
-              <tr><td><code>Value</code></td><td>numeric</td><td>Score/normalized value (0–1 or 0–100).</td></tr>
+              <tr><td>Confusion Matrix</td><td>Quick view of TP/FP/FN/TN distribution</td></tr>
+              <tr><td>ROC Curve + AUC</td><td>Threshold-agnostic probability quality</td></tr>
+              <tr><td>Correlation Heatmap</td><td>Feature relationships and dependencies</td></tr>
+              <tr><td>Bar / Box / Line / Area / Scatter</td><td>Exploratory KPI analysis and trends</td></tr>
             </tbody>
           </table>
-          <p>
-            In the dashboard, the tab renders:
-          </p>
-          <ul class="list-check">
-            <li>KPI table (<em>sortable in Streamlit</em>).</li>
-            <li>Radar (polar) chart for a quick strengths profile.</li>
-            <li>Bar chart for side-by-side KPI comparison.</li>
-          </ul>
-          <p class="callout"><strong>Tip:</strong> Keep KPI names concise; normalize values to a common scale for clear comparisons.</p>
         </section>
 
-  <section id="usage" class="card">
-          <h2>Usage Guide</h2>
-          <ol>
-            <li>Put your experiment outputs in the appropriate <code>comparison_results/&nbsp;/ combined_results/</code> folders.</li>
-            <li>Place <code>supply_chain_kpi_matrix.csv</code> in <code>data/artifacts/</code>.</li>
-            <li>Run <code>streamlit run app.py</code> and pick a dataset from the sidebar.</li>
-            <li>Navigate tabs to analyze performance, explore KPIs, and review business domains.</li>
-          </ol>
-        </section>
-
-   <section id="troubleshooting" class="card">
-          <h2>Troubleshooting</h2>
-          <ul class="list-check">
-            <li><strong>No datasets in sidebar:</strong> Ensure <code>comparison_results/</code> or <code>combined_results/</code> exists and contains files.</li>
-            <li><strong>CSV load errors:</strong> The loader falls back to <code>engine="python"</code>. Validate delimiter & encoding.</li>
-            <li><strong>Empty charts:</strong> Check column names (<code>efficiency_label</code>, <code>predicted_efficiency</code>, <code>predicted_probability</code>).</li>
-            <li><strong>KPI Matrix warning:</strong> Create the CSV with <code>KPI</code> and <code>Value</code> columns.</li>
-            <li><strong>Performance issues:</strong> Use built-in downsampling (defaults to 5,000 rows).</li>
-          </ul>
-        </section>
-
-  <section id="faq" class="card">
-          <h2>FAQ</h2>
-          <h3>Can I rename directories?</h3>
-          <p>Yes. Update the path constants at the top of <code>app.py</code> to match your structure.</p>
-          <h3>What file formats are supported?</h3>
-          <p>CSV for predictions; JSON for metrics. The loader handles duplicated columns and common CSV quirks.</p>
-          <h3>How do I add a new KPI?</h3>
-          <p>Add a row to <code>supply_chain_kpi_matrix.csv</code> and refresh the app cache via the sidebar button.</p>
-        </section>
-
-  <section id="team" class="card">
+   <section id="team" class="card">
           <h2>Team</h2>
-          <table class="table">
+          <table>
             <thead><tr><th>Name</th><th>Role</th><th>Focus</th></tr></thead>
             <tbody>
               <tr><td>Pranay Dhore</td><td>Lead Developer / Data Scientist</td><td>Modeling, System Architecture</td></tr>
@@ -212,40 +199,41 @@ source venv/bin/activate</code></pre>
 
    <section id="roadmap" class="card">
           <h2>Roadmap</h2>
-          <ul class="list-check">
-            <li>Real-time ERP/WMS integration</li>
-            <li>Demand forecasting and inventory optimization</li>
+          <ul class="clean">
+            <li>Real-time ERP/WMS/IoT integration</li>
+            <li>Demand forecasting & inventory optimization</li>
             <li>Automated retraining pipelines</li>
             <li>Cloud deployment (AWS/GCP/Azure)</li>
             <li>PDF/PPT export of insights</li>
           </ul>
         </section>
 
+  <section id="contrib" class="card">
+          <h2>Contribute & Support</h2>
+          <p>If this project helps you, please star the repo and open issues/PRs for ideas or fixes.</p>
+        </section>
+
    <section id="license" class="card">
           <h2>License</h2>
-          <p>Include your preferred license (MIT/Apache-2.0) here.</p>
+          <p>Add your license choice (MIT / Apache-2.0) here.</p>
         </section>
       </main>
     </div>
 
-  <footer>
-      <p>Built with ❤️ for data-informed supply chains. • <span id="buildTime"></span></p>
+<footer>
+      <p>Built with 💙 for data-informed supply chains • <span id="stamp"></span></p>
     </footer>
   </div>
-
 <script>
-  // Theme toggle with localStorage
   (function(){
-    const root = document.documentElement;
-    const saved = localStorage.getItem("theme");
-    if(saved === "light"){ root.classList.add("light"); }
-    const sw = document.getElementById("themeSwitch");
-    sw.addEventListener("click", ()=>{
+    const root=document.documentElement;
+    const saved=localStorage.getItem("theme");
+    if(saved==="light") root.classList.add("light");
+    document.getElementById("theme").addEventListener("click",()=>{
       root.classList.toggle("light");
-      localStorage.setItem("theme", root.classList.contains("light") ? "light" : "dark");
+      localStorage.setItem("theme",root.classList.contains("light")?"light":"dark");
     });
-    // Build time
-    document.getElementById("buildTime").textContent = "Generated: " + new Date().toLocaleString();
+    document.getElementById("stamp").textContent = "Generated: " + new Date().toLocaleString();
   })();
 </script>
 </body>
