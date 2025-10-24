@@ -1,0 +1,15 @@
+{
+    "dataset": "tata_cliq",
+    "rows": 100,
+    "accuracy": 0.85,
+    "precision": 0.8888888888888888,
+    "recall": 0.8,
+    "f1_score": 0.8421052631578947,
+    "roc_auc": 0.9600000000000001,
+    "avg_profit_margin": 0.5306575430660281,
+    "avg_inventory_efficiency": 0.5446758395563012,
+    "avg_lead_time_efficiency": 0.4973106638832172,
+    "avg_risk_index": 0.8629473985557852,
+    "efficient_count": 50,
+    "timestamp": "2025-10-16T20:42:09.659569"
+}

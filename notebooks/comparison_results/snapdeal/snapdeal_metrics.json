@@ -1,0 +1,15 @@
+{
+    "dataset": "snapdeal",
+    "rows": 10000,
+    "accuracy": 0.9905,
+    "precision": 0.9813542688910697,
+    "recall": 1.0,
+    "f1_score": 0.9905894006934126,
+    "roc_auc": 0.99995,
+    "avg_profit_margin": 0.5058999859072403,
+    "avg_inventory_efficiency": 0.4980103232803539,
+    "avg_lead_time_efficiency": 0.5017344481718891,
+    "avg_risk_index": 0.8670727394180625,
+    "efficient_count": 5000,
+    "timestamp": "2025-10-16T20:42:32.614718"
+}

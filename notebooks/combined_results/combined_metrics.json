@@ -1,0 +1,16 @@
+{
+    "dataset": "combined",
+    "total_records": 150168,
+    "accuracy": 0.5,
+    "precision": 0.5,
+    "recall": 1.0,
+    "f1_score": 0.6666666666666666,
+    "roc_auc": 0.5,
+    "avg_profit_margin": 0.499704117233423,
+    "avg_inventory_efficiency": 0.4992203205209883,
+    "avg_lead_time_efficiency": 0.4995310025369663,
+    "avg_supplier_reliability": 0.5004615069584571,
+    "avg_risk_index": 0.8653319145866545,
+    "avg_performance_matrix_score": 0.4997292368124588,
+    "timestamp": "2025-10-16 20:47:29"
+}

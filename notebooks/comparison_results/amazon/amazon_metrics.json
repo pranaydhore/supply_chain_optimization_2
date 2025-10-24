@@ -1,0 +1,15 @@
+{
+    "dataset": "amazon",
+    "rows": 42675,
+    "accuracy": 0.9987111892208553,
+    "precision": 0.9990621336459554,
+    "recall": 0.9983598875351453,
+    "f1_score": 0.9987108871440291,
+    "roc_auc": 0.9999919831122612,
+    "avg_profit_margin": 0.4980037401405849,
+    "avg_inventory_efficiency": 0.49955467500954087,
+    "avg_lead_time_efficiency": 0.49872000055143123,
+    "avg_risk_index": 0.8647179391467522,
+    "efficient_count": 21338,
+    "timestamp": "2025-10-16T20:40:44.289164"
+}

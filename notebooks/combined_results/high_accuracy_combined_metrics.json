@@ -1,0 +1,10 @@
+{
+    "dataset": "combined_high_accuracy",
+    "total_records": 150168,
+    "accuracy": 0.5,
+    "precision": 0.5,
+    "recall": 1.0,
+    "f1_score": 0.6666666666666666,
+    "roc_auc": 0.5,
+    "timestamp": "2025-10-16 20:52:34"
+}

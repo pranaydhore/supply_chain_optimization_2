@@ -1,0 +1,10 @@
+{
+    "accuracy": 0.9951754385964913,
+    "precision": 0.9947414548641542,
+    "recall": 0.9956140350877193,
+    "f1_score": 0.9951775537045155,
+    "roc_auc": 0.9998268698060941,
+    "total_records": 11399,
+    "efficient_count": 5700,
+    "inefficient_count": 5699
+}

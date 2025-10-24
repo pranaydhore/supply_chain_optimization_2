@@ -1,0 +1,29 @@
+{
+    "dataset": "combined",
+    "total_records": 150168,
+    "accuracy": 0.996270892987947,
+    "precision": 0.9985283296541575,
+    "recall": 0.9940067923020577,
+    "f1_score": 0.9962624307548555,
+    "roc_auc": 0.9999398564027381,
+    "confusion_matrix": [
+        [
+            14995,
+            22
+        ],
+        [
+            90,
+            14927
+        ]
+    ],
+    "business_kpis": {
+        "avg_profit": 4.979820430836596,
+        "avg_profit_margin": 0.49912857838560265,
+        "avg_inventory_efficiency": 0.4986353501094998,
+        "avg_lead_time_efficiency": 0.4998198398683845,
+        "avg_supplier_reliability": 0.5003750430409016,
+        "avg_risk_index": 0.865853675473931,
+        "avg_performance_matrix": 0.4994897028510972
+    },
+    "timestamp": "2025-10-16 21:23:40"
+}

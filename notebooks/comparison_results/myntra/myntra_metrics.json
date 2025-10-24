@@ -1,0 +1,15 @@
+{
+    "dataset": "myntra",
+    "rows": 76000,
+    "accuracy": 0.9976315789473684,
+    "precision": 0.9976315789473684,
+    "recall": 0.9976315789473684,
+    "f1_score": 0.9976315789473684,
+    "roc_auc": 0.9999853704986149,
+    "avg_profit_margin": 0.4983624562314136,
+    "avg_inventory_efficiency": 0.4994757537511053,
+    "avg_lead_time_efficiency": 0.4990854866823534,
+    "avg_risk_index": 0.8651122400659572,
+    "efficient_count": 38000,
+    "timestamp": "2025-10-16T20:42:01.208108"
+}

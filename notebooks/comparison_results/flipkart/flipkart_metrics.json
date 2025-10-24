@@ -1,0 +1,15 @@
+{
+    "dataset": "flipkart",
+    "rows": 11399,
+    "accuracy": 0.9942982456140351,
+    "precision": 0.9921397379912664,
+    "recall": 0.9964912280701754,
+    "f1_score": 0.9943107221006564,
+    "roc_auc": 0.9998822714681441,
+    "avg_profit_margin": 0.5038040318611259,
+    "avg_inventory_efficiency": 0.4980937271603613,
+    "avg_lead_time_efficiency": 0.5017382252336775,
+    "avg_risk_index": 0.8660469282397009,
+    "efficient_count": 5700,
+    "timestamp": "2025-10-16T20:39:00.475557"
+}
